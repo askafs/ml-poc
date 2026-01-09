@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
+          python3 -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run unit tests
@@ -29,7 +29,7 @@ jobs:
 
       - name: Run ML pipeline
         run: |
-          python ml_pipeline.py
+          python3 ml_pipeline.py
 
       - name: Upload predictions
         uses: actions/upload-artifact@v4
